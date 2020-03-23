@@ -1,6 +1,6 @@
 # Service Oriented Architecture (SOA)
 
-- Python monitoring using: 
+- Python monitoring & visualizing using: 
   - [Prometheus](https://prometheus.io/)
   - [Grafana](https://grafana.com/)
  
