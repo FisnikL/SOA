@@ -12,5 +12,5 @@
 
 - Starting point: https://www.youtube.com/watch?v=HzEiRwJP6ag
 
-- RUNNIN WITH DOCKER
+- DOCKER RUN
 ![Docker compose](https://github.com/FisnikL/SOA/blob/master/Python%20monitoring%20with%20Prometheus%20%26%20visualizing%20with%20Grafana/images-for-readme/docker-compose.png)
