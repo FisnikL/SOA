@@ -4,7 +4,7 @@
   - [Prometheus](https://prometheus.io/)
   - [Grafana](https://grafana.com/)
  
- Additionally used:
+- Additionally used:
   - [FastAPI](https://fastapi.tiangolo.com/)
   - [Docker](https://www.docker.com/)
 
