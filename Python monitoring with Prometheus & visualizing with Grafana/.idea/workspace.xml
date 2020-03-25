@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b76467d6-cb4b-41cc-9acd-15da54226701" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/.idea/Python monitoring with Prometheus &amp; visualizing with Grafana.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/grafana-data/dashboard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/grafana-data/datasources.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/prometheus.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/python-application/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/python-application/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/python-application/src/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/python-application/src/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana/readme images/docker-compose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grafana-data/dashboard.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grafana-data/datasources.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prometheus.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-application/dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-application/src/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-application/src/server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme images/docker-compose.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ZabJ4oFOuujFTYHG5EshMrmaOG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Python monitoring with Prometheus and visualizing with Grafana" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b76467d6-cb4b-41cc-9acd-15da54226701" name="Default Changelist" comment="" />
+      <created>1585080077129</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585080077129</updated>
+      <workItem from="1585080087042" duration="1525000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1585086289435">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1585086289435" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1585080099655">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1440.860@0.0.1366.728" timestamp="1585080099655" />
+  </component>
+</project>

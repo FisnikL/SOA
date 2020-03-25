@@ -1,12 +1,6 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
 
-RUN mkdir /app/
-WORKDIR /app/
-
 COPY ./src/requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
-COPY ./src/ /app/
-
-ENV FASTAPI_APP=server.py
-CMD uvicorn server:app --port 5000
+COPY ./src /app

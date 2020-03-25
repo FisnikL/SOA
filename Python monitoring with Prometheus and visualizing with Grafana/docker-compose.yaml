@@ -6,7 +6,7 @@ services:
     container_name: python-application
     image: python-application
     ports:
-      - "81:5000"
+      - "81:80"
   prometheus:
     container_name: prometheus-svc
     image: prom/prometheus
