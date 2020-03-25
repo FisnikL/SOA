@@ -1,27 +1,31 @@
+import random
+
 import prometheus_client
-from prometheus_client import Summary, Counter, Histogram, Gauge
-import time
 from fastapi import FastAPI
 from fastapi.responses import PlainTextResponse
+from prometheus_client import Counter, Gauge, Histogram, Summary
 
 app = FastAPI()
 
 _INF = float("inf")
 
-graphs = {}
-graphs['c'] = Counter('python_request_operations_total', 'The total number of processed requests')
-graphs['h'] = Histogram('python_request_duration_seconds', 'Histogram for the duration in seconds.', buckets=(1, 2, 5, 6, 10, _INF))
+graphs = {
+    'counter': Counter('python_my_counter', 'This is my counter'),
+    'gauge': Gauge('python_my_gauge', 'This is my gauge'),
+    'histogram': Histogram('python_my_histogram', 'This is my histogram'),
+    'summary': Summary('python_my_summary', 'This is my summary')
+}
 
 
 @app.get("/", response_class=PlainTextResponse)
 def hello():
-    start = time.time()
-    graphs['c'].inc()
+    graphs['counter'].inc(random.random())
+    graphs['gauge'].set(random.random() * 15 - 5)
+    graphs['histogram'].observe(random.random() * 10)
+    graphs['summary'].observe(random.random() * 10)
+    # process_request(random.random() * 5)
 
-    time.sleep(0.600)
-    end = time.time()
-    graphs['h'].observe(end - start)
-    return "Hello World!"
+    return 'Hello World'
 
 
 @app.get("/metrics", response_class=PlainTextResponse)
@@ -32,7 +36,15 @@ def requests_count():
 
     return ''.join(res)
 
-
-
-
+# graphs['requests'].inc()
+# r = random.randrange(5)
+#
+# # Successfully processed
+# if r < 4:
+#     graphs['successfully'].inc()
+#     return "Hello World!"
+# # Error, Exception
+# else:
+#     graphs['error'].inc()
+#     return "Error"
 

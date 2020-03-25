@@ -6,7 +6,7 @@ scrape_configs:
   honor_labels: true
   static_configs:
   - targets: ['python-application:80']
-- job_name: prometheus
-  honor_labels: true
-  static_configs:
-  - targets: ['prometheus-svc:9090']
+# - job_name: prometheus
+#   honor_labels: true
+#   static_configs:
+#   - targets: ['prometheus-svc:9090']
