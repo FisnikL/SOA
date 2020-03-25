@@ -23,7 +23,6 @@ def hello():
     graphs['gauge'].set(random.random() * 15 - 5)
     graphs['histogram'].observe(random.random() * 10)
     graphs['summary'].observe(random.random() * 10)
-    # process_request(random.random() * 5)
 
     return 'Hello World'
 
@@ -35,16 +34,4 @@ def requests_count():
         res.append(prometheus_client.generate_latest(v).decode("utf-8"))
 
     return ''.join(res)
-
-# graphs['requests'].inc()
-# r = random.randrange(5)
-#
-# # Successfully processed
-# if r < 4:
-#     graphs['successfully'].inc()
-#     return "Hello World!"
-# # Error, Exception
-# else:
-#     graphs['error'].inc()
-#     return "Error"
 
