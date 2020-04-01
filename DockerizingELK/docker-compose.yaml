@@ -13,6 +13,8 @@ services:
     image: docker.elastic.co/kibana/kibana:7.6.1
     ports:
       - "5601:5601"
+    volumes:
+      - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     depends_on:
       - elasticsearch
   elk-demo:
@@ -31,9 +33,11 @@ services:
       - "9600:9600"
     volumes:
       - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
     depends_on:
       - elasticsearch
       - elk-demo
+    
 
 
     
