@@ -1,0 +1,2 @@
+http.host: "0"
+xpack.monitoring.elasticsearch.url: http://host.docker.internal:9200
