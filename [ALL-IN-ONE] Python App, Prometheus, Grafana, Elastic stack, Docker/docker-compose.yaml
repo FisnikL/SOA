@@ -1,0 +1,73 @@
+version: "3"
+services:
+  python-application:
+    build:
+      context: ./python-application
+    container_name: python-application
+    image: python-application
+    ports:
+      - "81:80"
+    volumes:
+      - logs:/app/logs/
+  prometheus:
+    container_name: prometheus-svc
+    image: prom/prometheus
+    ports:
+      - "9091:9090"
+    command: --config.file=/etc/prometheus/prometheus.yaml
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yaml
+  grafana:
+    image: grafana/grafana:6.7.0
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_AUTH_BASIC_ENABLED=false
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+  grafana-dashboards:
+    image: alpine:3.10
+    depends_on:
+      - grafana
+    volumes:
+      - ./grafana-data:/grafana
+    command: >
+      /bin/sh -c "
+        apk add --no-cache curl
+        echo 'waiting for grafana'
+        sleep 5s
+        cd /grafana
+        curl --request POST http://grafana:3000/api/datasources --header 'Content-Type: application/json' -d @datasources.json
+        curl --request POST http://grafana:3000/api/dashboards/db --header 'Content-Type: application/json' -d @dashboard.json"
+  elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.6.1
+    ports:
+      - "5601:5601"
+    volumes:
+      - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+    depends_on:
+      - elasticsearch
+  logstash:
+    container_name: logstash
+    image: docker.elastic.co/logstash/logstash:7.6.1
+    ports:
+      - "9600:9600"
+      - "9500:9500"
+    volumes:
+      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - logs:/usr/share/logstash/logs
+    depends_on:
+      - elasticsearch
+      - python-application
+volumes:
+    logs:

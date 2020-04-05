@@ -1,0 +1,479 @@
+{
+    "overwrite": true,
+    "dashboard": {
+        "__inputs": [],
+        "__requires": [
+            {
+                "type": "grafana",
+                "id": "grafana",
+                "name": "Grafana",
+                "version": "5.0.4"
+            }
+        ],
+        "annotations": {
+            "list": [
+                {
+                    "builtIn": 1,
+                    "datasource": "-- Grafana --",
+                    "enable": true,
+                    "hide": true,
+                    "iconColor": "rgba(0, 211, 255, 1)",
+                    "name": "Annotations & Alerts",
+                    "type": "dashboard"
+                }
+            ]
+        },
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "id": null,
+        "links": [],
+        "panels": [
+            {
+                "collapsed": true,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 3
+                },
+                "id": 6,
+                "panels": [
+                    {
+  "datasource": "prometheus",
+  "aliasColors": {},
+  "bars": false,
+  "dashLength": 10,
+  "dashes": false,
+  "fill": 1,
+  "gridPos": {
+    "h": 9,
+    "w": 11,
+    "x": 0,
+    "y": 1
+  },
+  "id": 10,
+  "legend": {
+    "avg": false,
+    "current": false,
+    "max": false,
+    "min": false,
+    "show": true,
+    "total": false,
+    "values": false
+  },
+  "lines": true,
+  "linewidth": 1,
+  "nullPointMode": "null",
+  "percentage": false,
+  "pointradius": 5,
+  "points": false,
+  "renderer": "flot",
+  "seriesOverrides": [],
+  "spaceLength": 10,
+  "stack": false,
+  "steppedLine": false,
+  "targets": [
+    {
+      "expr": "python_my_counter_total",
+      "legendFormat": "",
+      "interval": "",
+      "format": "time_series",
+      "hide": false,
+      "intervalFactor": 1,
+      "refId": "D"
+    }
+  ],
+  "thresholds": [],
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "MyCounter",
+  "tooltip": {
+    "shared": true,
+    "sort": 0,
+    "value_type": "individual"
+  },
+  "type": "graph",
+  "xaxis": {
+    "buckets": null,
+    "mode": "time",
+    "name": null,
+    "show": true,
+    "values": []
+  },
+  "yaxes": [
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    },
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    }
+  ],
+  "options": {
+    "dataLinks": []
+  },
+  "yaxis": {
+    "align": false,
+    "alignLevel": null
+  },
+  "fillGradient": 0,
+  "hiddenSeries": false,
+  "timeRegions": []
+},
+                  {
+  "datasource": "prometheus",
+  "aliasColors": {},
+  "bars": false,
+  "dashLength": 10,
+  "dashes": false,
+  "fill": 1,
+  "gridPos": {
+    "h": 9,
+    "w": 11,
+    "x": 11,
+    "y": 1
+  },
+  "id": 13,
+  "legend": {
+    "avg": false,
+    "current": false,
+    "max": false,
+    "min": false,
+    "show": true,
+    "total": false,
+    "values": false
+  },
+  "lines": true,
+  "linewidth": 1,
+  "nullPointMode": "null",
+  "percentage": false,
+  "pointradius": 5,
+  "points": false,
+  "renderer": "flot",
+  "seriesOverrides": [],
+  "spaceLength": 10,
+  "stack": false,
+  "steppedLine": false,
+  "targets": [
+    {
+      "expr": "scrape_duration_seconds",
+      "legendFormat": "",
+      "interval": "",
+      "format": "time_series",
+      "hide": false,
+      "intervalFactor": 1,
+      "refId": "D"
+    }
+  ],
+  "thresholds": [],
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "Scrape_Duration",
+  "tooltip": {
+    "shared": true,
+    "sort": 0,
+    "value_type": "individual"
+  },
+  "type": "graph",
+  "xaxis": {
+    "buckets": null,
+    "mode": "time",
+    "name": null,
+    "show": true,
+    "values": []
+  },
+  "yaxes": [
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    },
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    }
+  ],
+  "options": {
+    "dataLinks": []
+  },
+  "yaxis": {
+    "align": false,
+    "alignLevel": null
+  },
+  "fillGradient": 0,
+  "hiddenSeries": false,
+  "timeRegions": []
+},
+
+
+{
+  "datasource": "prometheus",
+  "aliasColors": {},
+  "bars": false,
+  "dashLength": 10,
+  "dashes": false,
+  "fill": 1,
+  "gridPos": {
+    "h": 9,
+    "w": 11,
+    "x": 0,
+    "y": 10
+  },
+  "id": 14,
+  "legend": {
+    "avg": false,
+    "current": false,
+    "max": false,
+    "min": false,
+    "show": true,
+    "total": false,
+    "values": false
+  },
+  "lines": true,
+  "linewidth": 1,
+  "nullPointMode": "null",
+  "percentage": false,
+  "pointradius": 5,
+  "points": false,
+  "renderer": "flot",
+  "seriesOverrides": [],
+  "spaceLength": 10,
+  "stack": false,
+  "steppedLine": false,
+  "targets": [
+    {
+      "expr": "python_my_gauge",
+      "legendFormat": "",
+      "interval": "",
+      "format": "time_series",
+      "hide": false,
+      "intervalFactor": 1,
+      "refId": "D"
+    }
+  ],
+  "thresholds": [],
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "MyGauge",
+  "tooltip": {
+    "shared": true,
+    "sort": 0,
+    "value_type": "individual"
+  },
+  "type": "graph",
+  "xaxis": {
+    "buckets": null,
+    "mode": "time",
+    "name": null,
+    "show": true,
+    "values": []
+  },
+  "yaxes": [
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    },
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    }
+  ],
+  "options": {
+    "dataLinks": []
+  },
+  "yaxis": {
+    "align": false,
+    "alignLevel": null
+  },
+  "fillGradient": 0,
+  "hiddenSeries": false,
+  "timeRegions": []
+},
+
+
+
+
+                  {
+  "datasource": "prometheus",
+  "aliasColors": {},
+  "bars": false,
+  "dashLength": 10,
+  "dashes": false,
+  "fill": 1,
+  "gridPos": {
+    "h": 9,
+    "w": 11,
+    "x": 11,
+    "y": 10
+  },
+  "id": 15,
+  "legend": {
+    "avg": false,
+    "current": false,
+    "max": false,
+    "min": false,
+    "show": true,
+    "total": false,
+    "values": false
+  },
+  "lines": true,
+  "linewidth": 1,
+  "nullPointMode": "null",
+  "percentage": false,
+  "pointradius": 5,
+  "points": false,
+  "renderer": "flot",
+  "seriesOverrides": [],
+  "spaceLength": 10,
+  "stack": false,
+  "steppedLine": false,
+  "targets": [
+    {
+      "expr": "python_my_histogram_bucket{le=\"2.5\"}",
+      "legendFormat": "",
+      "interval": "",
+      "format": "time_series",
+      "hide": false,
+      "intervalFactor": 1,
+      "refId": "D"
+    },
+    {
+      "expr": "python_my_histogram_bucket{le=\"5.0\"}",
+      "legendFormat": "",
+      "interval": "",
+      "refId": "A"
+    },
+    {
+      "expr": "python_my_histogram_bucket{le=\"7.5\"}",
+      "legendFormat": "",
+      "interval": "",
+      "refId": "B"
+    }
+  ],
+  "thresholds": [],
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "MyHistogram",
+  "tooltip": {
+    "shared": true,
+    "sort": 0,
+    "value_type": "individual"
+  },
+  "type": "graph",
+  "xaxis": {
+    "buckets": null,
+    "mode": "time",
+    "name": null,
+    "show": true,
+    "values": []
+  },
+  "yaxes": [
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    },
+    {
+      "format": "short",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    }
+  ],
+  "options": {
+    "dataLinks": []
+  },
+  "yaxis": {
+    "align": false,
+    "alignLevel": null
+  },
+  "fillGradient": 0,
+  "hiddenSeries": false,
+  "timeRegions": []
+}
+
+
+
+
+
+
+
+
+
+
+                ],
+                "title": "Python",
+                "type": "row"
+            }
+        ],
+        "schemaVersion": 16,
+        "style": "dark",
+        "tags": [],
+        "templating": {
+            "list": []
+        },
+        "time": {
+            "from": "now-5m",
+            "to": "now"
+        },
+        "timepicker": {
+            "refresh_intervals": [
+                "5s",
+                "10s",
+                "30s",
+                "1m",
+                "5m",
+                "15m",
+                "30m",
+                "1h",
+                "2h",
+                "1d"
+            ],
+            "time_options": [
+                "5m",
+                "15m",
+                "1h",
+                "6h",
+                "12h",
+                "24h",
+                "2d",
+                "7d",
+                "30d"
+            ]
+        },
+        "timezone": "",
+        "title": "Application Telemetry (Prometheus)",
+        "uid": "pvXvovKWz",
+        "version": 2
+    }
+}
