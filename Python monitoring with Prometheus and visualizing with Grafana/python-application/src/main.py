@@ -1,22 +1,11 @@
 import random
 
 import prometheus_client
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.responses import PlainTextResponse
 from prometheus_client import Counter, Gauge, Histogram, Summary
 
-import logging
-from logging.handlers import RotatingFileHandler
-from fastapi.logger import logger as fastapi_logger
-
 app = FastAPI()
-
-formatter = logging.Formatter(
-    "[%(asctime)s.%(msecs)03d] %(levelname)s [%(thread)d] - %(message)s", "%Y-%m-%d %H:%M:%S")
-handler = RotatingFileHandler('../../volumes/python-application_logs/logFile.log', backupCount=0)
-handler.setFormatter(formatter)
-logging.getLogger().setLevel(logging.NOTSET)
-fastapi_logger.addHandler(handler)
 
 _INF = float("inf")
 
@@ -29,13 +18,11 @@ graphs = {
 
 
 @app.get("/", response_class=PlainTextResponse)
-def hello(request: Request):
+def hello():
     graphs['counter'].inc(random.random())
     graphs['gauge'].set(random.random() * 15 - 5)
     graphs['histogram'].observe(random.random() * 10)
     graphs['summary'].observe(random.random() * 10)
-
-    fastapi_logger.info(request.client.host + " " + request.method + " Hello World")
 
     return 'Hello World'
 
@@ -47,3 +34,4 @@ def requests_count():
         res.append(prometheus_client.generate_latest(v).decode("utf-8"))
 
     return ''.join(res)
+
