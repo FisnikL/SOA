@@ -7,7 +7,7 @@ This application includes dockerized:
 - Elastic stack (Elasticsearch, Logstash, Kibana)
 
 
-Starting
+# Starting
 - docker-compose up
 - Then services can be accessed on:
   - Python application
