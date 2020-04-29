@@ -1,7 +1,7 @@
 # Import Session, this will allow you to declare the type of
 # the db parameters and have better type checks and completion in your functions
 from sqlalchemy.orm import Session
-from . import models, schemas
+import models, schemas
 
 
 def get_user(db: Session, user_id: int):
